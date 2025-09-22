@@ -134,6 +134,7 @@ docker images
 docker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ubuntu-ansible-node:latest
 docker run -d --name ubuntu2 --hostname ubuntu2 -p 2002:22 -p 8002:80 tektutor/ubuntu-ansible-node:latest
 ```
+<img width="2848" height="1390" alt="image" src="https://github.com/user-attachments/assets/a808ad47-e578-4e34-89f1-02656b1a143a" />
 
 List and see if the ubuntu1 and ubuntu2 containers are running
 ```
