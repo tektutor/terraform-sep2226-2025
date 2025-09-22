@@ -99,3 +99,12 @@ sudo apt update && apt install -y ansible
     - developed on top of AWX open source product
     - comes with world-wide support from Red Hat ( an IBM company )
 </pre>
+
+
+## Info - Ansible Inventory
+<pre>
+- captures connectivity details to Unix, Linux, Windows ansible nodes
+- two types
+  1. Static Inventory
+  2. Dynamic Inventory
+</pre>
