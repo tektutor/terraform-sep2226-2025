@@ -180,7 +180,9 @@ git pull
 cd Day1/ansible
 cat inventory
 cat ping-playbook.yml
-ansible-playbook -i inventory ping-playbook.yml
+ansible-playbook -i inventory ping-playbook.yml 
+ansible-playbook -i inventory ping-playbook.yml --limit=ubuntu1
+ansible-playbook -i inventory ping-playbook.yml --limit=ubuntu2
 ```
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/6cf6394b-a64a-4389-8a5c-2e4a0a71ed48" />
