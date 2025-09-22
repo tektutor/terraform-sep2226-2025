@@ -2,4 +2,4 @@
   hosts: all
   tasks:
   - name: Install nginx web server in Ubuntu ansible node
-    apt: name=nginx state=latest update_cache=yes
+    apt: name=nginx state=latest update_cache=yes force=yes
