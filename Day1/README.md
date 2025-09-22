@@ -173,3 +173,14 @@ ansible -i inventory all -m shell -a "hostname -i"
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/18850abd-9e94-482c-ad6a-fdc20e2734c5" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a3e0700b-58db-48d3-99f2-9c9d6767b5e8" />
 
+## Lab - Running your first ansible playbook
+```
+cd ~/terraform-sep2226-2025
+git pull
+cd Day1/ansible
+cat inventory
+cat ping-playbook.yml
+ansible-playbook -i inventory ping-playbook.yml
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/6cf6394b-a64a-4389-8a5c-2e4a0a71ed48" />
