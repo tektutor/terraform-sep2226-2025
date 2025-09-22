@@ -142,3 +142,30 @@ docker ps
 ```
 <img width="1942" height="745" alt="image" src="https://github.com/user-attachments/assets/44eba12f-9715-4bc6-9b63-43e8b082cd52" />
 
+## Lab - Running ansible ad-hoc command
+Check if you are able to SSH into ubuntu1 and ubuntu2 ansible contaible nodes
+```
+ssh -p 2001 root@localhost
+ls
+hostname
+hostname -i
+exit
+
+ssh -p 2002 root@localhost
+ls
+hostname
+hostname -i
+exit
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9e7a7157-8963-4f0d-a0d2-c0bd231c6880" />
+
+Run the ansible-hoc command to ping the ansible nodes
+```
+cd ~/terraform-sep2226-2025
+git pull
+cd Day1/ansible
+cat inventory
+ansible -i inventory all -m ping
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/18850abd-9e94-482c-ad6a-fdc20e2734c5" />
+
