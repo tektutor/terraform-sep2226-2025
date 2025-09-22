@@ -111,7 +111,7 @@ sudo apt update && apt install -y ansible
 
 ## Lab - Create a custom ubuntu ansible node container image
 ```
-cd terraform-sep2226-2025
+cd ~/terraform-sep2226-2025
 git pull
 cd Day1/ansible/CustomAnsibleNodeDockerImages/ubuntu
 cat Dockerfile
@@ -127,3 +127,45 @@ docker images | grep tektutor
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/581f14e3-b0fa-4dd1-bbc3-96eff14da3ff" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3d3658c5-8f6d-4304-bbd3-fa6d325eccbf" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/147aa580-8027-4431-a0d1-3b18173dc6f6" />
+
+## Lab - Let's create couple of ubuntu ansible node containers using our custom docker image
+```
+docker images
+docker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ubuntu-ansible-node:latest
+docker run -d --name ubuntu2 --hostname ubuntu2 -p 2002:22 -p 8002:80 tektutor/ubuntu-ansible-node:latest
+```
+<img width="2848" height="1390" alt="image" src="https://github.com/user-attachments/assets/a808ad47-e578-4e34-89f1-02656b1a143a" />
+
+List and see if the ubuntu1 and ubuntu2 containers are running
+```
+docker ps
+```
+<img width="1942" height="745" alt="image" src="https://github.com/user-attachments/assets/44eba12f-9715-4bc6-9b63-43e8b082cd52" />
+
+## Lab - Running ansible ad-hoc command
+Check if you are able to SSH into ubuntu1 and ubuntu2 ansible contaible nodes
+```
+ssh -p 2001 root@localhost
+ls
+hostname
+hostname -i
+exit
+
+ssh -p 2002 root@localhost
+ls
+hostname
+hostname -i
+exit
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9e7a7157-8963-4f0d-a0d2-c0bd231c6880" />
+
+Run the ansible-hoc command to ping the ansible nodes
+```
+cd ~/terraform-sep2226-2025
+git pull
+cd Day1/ansible
+cat inventory
+ansible -i inventory all -m ping
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/18850abd-9e94-482c-ad6a-fdc20e2734c5" />
+
