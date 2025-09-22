@@ -1,0 +1,11 @@
+- name: First play
+  hosts: ubuntu1
+  tasks:
+  - name: Ping ubuntu1 ansible node container
+    ping:
+
+- name: Second play
+  hosts: ubuntu2
+  tasks:
+  - name: Ping ubuntu2 ansible node container
+    ping:
