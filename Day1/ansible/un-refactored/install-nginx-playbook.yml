@@ -18,4 +18,3 @@
 
   - name: Deploy custom web page
     copy: src=index.html dest=/var/html/index.html
-
