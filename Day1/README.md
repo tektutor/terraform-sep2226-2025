@@ -1,4 +1,4 @@
-# Day 1
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/7fc02cb2-f5a5-4fe9-9702-90d432c091c2" /># Day 1
 
 ## Lab - Installing Ansible core in Ubuntu
 ```
@@ -171,4 +171,5 @@ ansible -i inventory ubuntu2 -m ping
 ansible -i inventory all -m shell -a "hostname -i"
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/18850abd-9e94-482c-ad6a-fdc20e2734c5" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a3e0700b-58db-48d3-99f2-9c9d6767b5e8" />
 
