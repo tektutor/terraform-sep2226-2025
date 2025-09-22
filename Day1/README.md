@@ -239,3 +239,4 @@ ssh -p 2004 root@localhost
 hostname -i
 exit
 ```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c13edec5-b466-464b-b0a0-9c199218c3b9" />
