@@ -9,4 +9,4 @@
 </pre>
 
 ## Tools installed in our lab machine
-<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/eb554e72-8a3b-4e18-9d7e-7194d146277a" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/bce49019-4a81-41be-9a5f-6d52895c4a30" />
