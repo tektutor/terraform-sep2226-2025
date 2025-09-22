@@ -186,3 +186,15 @@ ansible-playbook -i inventory ping-playbook.yml --limit=ubuntu2
 ```
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/6cf6394b-a64a-4389-8a5c-2e4a0a71ed48" />
+
+## Lab - Running install nginx playbook
+```
+cd ~/terraform-sep2226-2025
+git pull
+cd Day1/ansible/un-refactored
+cat inventory
+cat install-nginx-playbook.yml
+ansible-playbook -i inventory install-nginx-playbook.yml
+
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3c017405-af3e-401c-9444-daf1bda1ff99" />
