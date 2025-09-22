@@ -196,6 +196,10 @@ cat inventory
 cat install-nginx-playbook.yml
 ansible-playbook -i inventory install-nginx-playbook.yml
 
+curl http://localhost:8001
+curl http://localhost:8002
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3c017405-af3e-401c-9444-daf1bda1ff99" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ae2824d4-4713-43e0-848e-795380366849" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/711bb639-4008-4d02-b7bd-a261b596d0b8" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8570a5de-998d-4284-9779-75f1c6160c6a" />
