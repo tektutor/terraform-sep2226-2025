@@ -212,6 +212,7 @@ cd ~/terraform-sep2226-2025
 git pull
 cd Day1/ansible/CustomAnsibleNodeDockerImages/rocky
 cat Dockerfile
+cp ~/.ssh/id_ed25519.pub authorized_keys
 docker build -t tektutor/rocky-ansible-node:latest .
 
 docker images | grep ansible
