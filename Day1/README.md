@@ -205,3 +205,18 @@ curl http://localhost:8002
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8570a5de-998d-4284-9779-75f1c6160c6a" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/659836ce-dec0-4f77-8fdd-142d0ce00445" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c56c2396-7edf-434d-91cc-6296c23c17e2" />
+
+## Lab - Building custom rocky linux ansible node image
+```
+cd ~/terraform-sep2226-2025
+git pull
+cd Day1/ansible/CustomAnsibleNodeDockerImages/rocky
+cat Dockerfile
+docker build -t tektutor/rocky-ansible-node:latest .
+
+docker images | grep ansible
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/631dbbe5-a29d-4f9c-b4ce-2998e4a5d74a" />
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/743687ee-5690-4988-9b60-91c132e64f66" />
