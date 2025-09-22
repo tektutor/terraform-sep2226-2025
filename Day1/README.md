@@ -166,6 +166,9 @@ git pull
 cd Day1/ansible
 cat inventory
 ansible -i inventory all -m ping
+ansible -i inventory ubuntu1 -m ping
+ansible -i inventory ubuntu2 -m ping
+ansible -i inventory all -m shell -a "hostname -i"
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/18850abd-9e94-482c-ad6a-fdc20e2734c5" />
 
