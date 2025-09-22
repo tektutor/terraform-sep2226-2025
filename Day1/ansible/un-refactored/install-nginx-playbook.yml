@@ -1,0 +1,5 @@
+- name: Install nginx web server, configure web root folder to serve web pages from our custom folder, deploy custom web page
+  hosts: all
+  tasks:
+  - name: Install nginx web server in Ubuntu ansible node
+    apt: name=nginx state=latest update_cache=yes
