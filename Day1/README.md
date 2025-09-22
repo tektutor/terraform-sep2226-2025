@@ -221,3 +221,21 @@ docker images | grep ansible
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/631dbbe5-a29d-4f9c-b4ce-2998e4a5d74a" />
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/743687ee-5690-4988-9b60-91c132e64f66" />
+
+## Lab - Creating couple of rocky ansible node containers using the recently built rocky image
+```
+docker run -d --name rocky1 --hostname rocky1 -p 2003:22 -p 8003:80 tektutor/rocky-ansible-node:latest
+docker run -d --name rocky2 --hostname rocky2 -p 2004:22 -p 8004:80 tektutor/rocky-ansible-node:latest
+docker ps
+```
+
+Ensure you're able to SSH into rocky1 and rock2 without password
+```
+ssh -p 2003 root@localhost
+hostname -i
+exit
+
+ssh -p 2004 root@localhost
+hostname -i
+exit
+```
