@@ -108,3 +108,18 @@ sudo apt update && apt install -y ansible
   1. Static Inventory
   2. Dynamic Inventory
 </pre>
+
+## Lab - Create a custom ubuntu ansible node container image
+```
+cd terraform-sep2226-2025
+git pull
+cd Day1/ansible/CustomAnsibleNodeDockerImages/ubuntu
+cat Dockerfile
+
+ssh-keygen
+cp ~/.ssh/id_ed25519.pub authorized_keys
+
+docker build -t tektutor/ubuntu-ansible-node:latest .
+
+docker images | grep tektutor
+```
