@@ -1,0 +1,21 @@
+- name: Install nginx web server, configure web root folder to serve web pages from our custom folder, deploy custom web page
+  hosts: all
+  vars_files:
+  - nginx-vars.yml
+
+  tasks:
+  - include_tasks: "install-nginx-{{ansible_distribution|lower}}.yml"
+  - include_tasks: "start-nginx-{{ansible_distribution|lower}}.yml"
+  - include_tasks: common-nginx-tasks.yml
+  - include_tasks: "configure-nginx-{{ansible_distribution|lower}}.yml"
+  - include_tasks: "restart-nginx-{{ansible_distribution|lower}}.yml"
+
+- name: Test the nginx servers are up and running
+  hosts: localhost
+  tasks:
+  - name: Access the web page
+    shell: curl "http://localhost:8{{item}}"
+    with_sequence: count=4 format="%03d"
+    register: output
+
+  - debug: var=output
