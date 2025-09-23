@@ -315,7 +315,63 @@ Now you may verify the golang version
 ```
 go version
 ```
+
 It will report
 <pre>
 go version go1.25.1 linux/amd64  
 </pre>
+
+
+## Info - Golang Overview
+<pre>
+- golang is developed by Google using C programming language
+- golang is a compiled programming language
+- golang syntax resembles very close to C programming language
+- golang has 25 keywords
+- golang only supports for loop
+- just like C/C++/C# main function is the entry-point function ( the very function that will invoked when you run a go application )
+- golang supports pointers but memory is managed by garbage collector unlike C/C++
+- golang doesn't support class
+- golang only supports functions
+- using golang one can develop a new compiler/interpreter, a game, console based application, graphical application that runs on your local machine, can develop mobile applications, can develop AI/ML applications, web applications, etc.,
+- using golang one can develop REST API, Microservices, etc.,
+- is case-sensitive
+- statically typed programming language
+- performance wise, it is faster than most compiled languages, definitely more faster than interpretted and scripting languages
+- even compilation is done faster in go lang for bulky applications
+- Some of the popular tools developed in Golang
+  - Terraform
+  - Docker
+  - Kubernetes
+  - Openshift  
+</pre>
+
+## Info - Golang keywords
+<pre>
+- break
+- default
+- func
+- interface
+- select
+- case
+- defer
+- go
+- map
+- struct
+- chan
+- else
+- goto
+- package
+- switch
+- const
+- fallthrough
+- if
+- range
+- type
+- continue
+- for
+- import
+- return
+- var
+</pre>
+
