@@ -120,6 +120,8 @@ kubectl config set-context --current --namespace=awx
 kubectl apply -f awx.yml
 kubectl logs -f deployments/awx-operator-controller-manager -c awx-manager
 kubectl get svc -l "app.kubernetes.io/managed-by=awx-operator"
+minikube ip
+kubectl get svc -n awx
 ```
 You may access the ansible tower webconsole
 ```
