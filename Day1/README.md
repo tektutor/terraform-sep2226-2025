@@ -275,6 +275,19 @@ curl http://localhost:8003
 curl http://localhost:8004
 ```
 
+## Info - SOLID Design Principles
+<pre>
+S - Single Responsibility Principle (SRP)
+O - Open Closed Principle (OCP)
+    - Your design is good if it satisfies the following desing principles
+    - A design/code is considered good if it is open of extension
+    - Extending new functionality should be done without modifying existing code
+    - To add new functionality you can write new code 
+L - Liskov Substitution Principle (LSP)
+I - Interface Seggregation
+D - Dependency Injection or Dependency Inversion or Inversion of Control(IOC)
+</pre>
+
 ## Lab - Running the install nginx playbook - refactored
 ```
 cd ~/terraform-sep2226-2025
