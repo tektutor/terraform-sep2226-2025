@@ -21,8 +21,24 @@ cd Day2/ansible/role
 ansible init nginx
 tree nginx
 
+cp scripts/default nginx/files
+cp scripts/nginx.conf nginx/files
+cp scripts/index.html.j2 nginx/templates
+cp scripts/nginx-vars.yml nginx/defaults
+cp scripts/nginx-vars.yml nginx/vars
+cp scripts/restart* nginx/handlers
+cp scripts/*.yml nginx/tasks
+tree nginx
+
 ansible-playbook install-nginx-playbook.yml
 ```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/5781c876-7474-4a3f-a471-e9813fc48e14" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e24c4385-d8bb-4278-94ed-cd56318714d7" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3d3f175d-bbfc-4988-b9cb-8c9c25553636" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/7ffa38d2-0ef9-4f65-8d30-76b9cf1b00d0" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3c747e8b-1d16-4ff5-b5fd-044f3e1ef076" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8ab0b3a5-8f2d-4a4e-bfd8-94368a3ceb93" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b16ae53a-2fa6-4591-b537-477bad25d6ea" />
 
 ## Lab - Installing AWX 
 
