@@ -266,3 +266,11 @@ ansible-playbook install-nginx-playbook.yml
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/52edec40-8a8b-4dfc-a883-0371c55b5647" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b47007bd-a3a1-451b-943b-f75a0b97013c" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/dbf922a4-4090-48ae-8654-f25701dffdf5" />
+
+Test if the web servers are serving our custom web pages
+```
+curl http://localhost:8001
+curl http://localhost:8002
+curl http://localhost:8003
+curl http://localhost:8004
+```
