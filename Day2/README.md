@@ -297,4 +297,8 @@ To run the playbook, click "Launch" Button
 cd ~
 wget https://go.dev/dl/go1.25.1.linux-amd64.tar.gz
 tar xvf go1.25.1.linux-amd64.tar.gz
+export PATH=/home/student/go/bin:$PATH
+export GOROOT=/home/student/go
+export GOPATH=/home/student/go/bin
+go version
 ```
