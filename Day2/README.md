@@ -57,7 +57,6 @@ chmod +x ./kubectl
 sudo mv kubectl /usr/local/bin
 
 docker ps -a
-minikube start
 minikube status
 kubectl get nodes
 ```
