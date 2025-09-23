@@ -212,6 +212,7 @@ cd ~/terraform-sep2226-2025
 git pull
 cd Day1/ansible/CustomAnsibleNodeDockerImages/rocky
 cat Dockerfile
+cp ~/.ssh/id_ed25519.pub authorized_keys
 docker build -t tektutor/rocky-ansible-node:latest .
 
 docker images | grep ansible
@@ -220,3 +221,32 @@ docker images | grep ansible
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/631dbbe5-a29d-4f9c-b4ce-2998e4a5d74a" />
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/743687ee-5690-4988-9b60-91c132e64f66" />
+
+## Lab - Creating couple of rocky ansible node containers using the recently built rocky image
+```
+docker run -d --name rocky1 --hostname rocky1 -p 2003:22 -p 8003:80 tektutor/rocky-ansible-node:latest
+docker run -d --name rocky2 --hostname rocky2 -p 2004:22 -p 8004:80 tektutor/rocky-ansible-node:latest
+docker ps
+```
+
+Ensure you're able to SSH into rocky1 and rock2 without password
+```
+ssh -p 2003 root@localhost
+hostname -i
+exit
+
+ssh -p 2004 root@localhost
+hostname -i
+exit
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c13edec5-b466-464b-b0a0-9c199218c3b9" />
+
+## Lab - Integrating rocky1 and rocky2 into our existing inventory
+```
+cd ~/terraform-sep2226-2025
+git pull
+cd Day1/ansible/un-refactored
+cat inventory
+ansible -i inventory all -m ping
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8e355731-6b4e-4781-b357-562cc2e79295" />
