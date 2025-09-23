@@ -1,0 +1,2 @@
+- name: Restart nginx web server in Ubuntu to apply config changes
+  service: name=nginx state=restarted
