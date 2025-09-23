@@ -298,3 +298,11 @@ cat ansible.cfg
 cat install-nginx-playbook.yml
 ansible-playbook install-nginx-playbook.yml
 ```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ae799767-be92-47e3-804d-847d43fa1e2a" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b8bd47ac-b884-40ba-8a79-512bc34ac8be" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c14401b7-ea6b-473f-9133-bae8ba6d0b0a" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/89506c62-ea0e-42b8-b8b9-db5c4104f57d" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/5e472e5e-f1a4-4c0d-b0a9-ce7ed1cffdde" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/5610fb8c-b6a5-4969-b30a-3520963811b0" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/fdb41841-536c-47cb-af8f-54d67dcedcae" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/4ce57c8a-d304-456b-ba11-1e0b19fe293f" />
