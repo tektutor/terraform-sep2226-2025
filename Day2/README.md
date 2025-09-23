@@ -375,3 +375,20 @@ go version go1.25.1 linux/amd64
 - var
 </pre>
 
+## Lab - Write your first Hello World in golang
+Create a file named hello.go with the below content
+<pre>
+package main
+
+import "fmt"
+
+func main() {
+  fmt.Println ("Hello World !")
+}
+</pre>
+
+Run your application
+```
+go run ./hello.go
+```
+
