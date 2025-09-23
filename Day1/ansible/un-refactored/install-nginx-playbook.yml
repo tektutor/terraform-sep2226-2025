@@ -59,3 +59,13 @@
 
   - name: Deploy custom web page
     template: src=index.html.j2 dest=/var/html/index.html
+
+- name: Test the nginx servers are up and running
+  hosts: localhost
+  tasks:
+  - name: Access the web page
+    shell: curl "http://localhost:8{{item}}"
+    with_sequence: count=4 format="%03d"
+    register: output
+
+  - debug: var=output
