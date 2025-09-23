@@ -1,0 +1,4 @@
+- name: This playbook will install nginx, configures web root folder and deploys custom web page in Ubuntu and Rocky Linux distros
+  hosts: all
+  roles:
+  - nginx
