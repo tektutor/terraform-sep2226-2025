@@ -274,3 +274,14 @@ curl http://localhost:8002
 curl http://localhost:8003
 curl http://localhost:8004
 ```
+
+## Lab - Running the install nginx playbook - refactored
+```
+cd ~/terraform-sep2226-2025
+git pull
+cd Day1/ansible/refactored
+cat inventory
+cat ansible.cfg
+cat install-nginx-playbook.yml
+ansible-playbook install-nginx-playbook.yml
+```
