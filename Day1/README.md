@@ -240,3 +240,13 @@ hostname -i
 exit
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c13edec5-b466-464b-b0a0-9c199218c3b9" />
+
+## Lab - Integrating rocky1 and rocky2 into our existing inventory
+```
+cd ~/terraform-sep2226-2025
+git pull
+cd Day1/ansible/un-refactored
+cat inventory
+ansible -i inventory all -m ping
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8e355731-6b4e-4781-b357-562cc2e79295" />
