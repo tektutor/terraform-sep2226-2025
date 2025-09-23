@@ -297,8 +297,25 @@ To run the playbook, click "Launch" Button
 cd ~
 wget https://go.dev/dl/go1.25.1.linux-amd64.tar.gz
 tar xvf go1.25.1.linux-amd64.tar.gz
-export PATH=/home/student/go/bin:$PATH
+```
+
+Edit your /home/student/.bashrc and append the below at the end of the file
+```
+export PATH=$PATH:/home/student/go/bin
 export GOROOT=/home/student/go
 export GOPATH=/home/student/go/bin
+```
+
+To apply the exported variables 
+```
+source ~/.bashrc
+```
+
+Now you may verify the golang version
+```
 go version
 ```
+It will report
+<pre>
+go version go1.25.1 linux/amd64  
+</pre>
