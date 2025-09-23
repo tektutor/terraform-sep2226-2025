@@ -1,5 +1,10 @@
 - name: Install nginx web server, configure web root folder to serve web pages from our custom folder, deploy custom web page
   hosts: all
+  vars:
+    greeting_msg: "Welcome to DevOps!"
+    provisioner_tool: "Docker"
+    conf_mgr_tool: "Ansible"
+
   tasks:
   - name: Install nginx web server in Ubuntu ansible node
     when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
@@ -48,5 +53,9 @@
     when: ( ansible_distribution == "Rocky" and ansible_os_family == "RedHat" )
     shell: nginx -s stop && nginx 
 
+  - name: Retrieve IP address
+    shell: hostname -i
+    register: ipaddress
+
   - name: Deploy custom web page
-    copy: src=index.html dest=/var/html/index.html
+    template: src=index.html.j2 dest=/var/html/index.html
