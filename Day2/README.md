@@ -392,3 +392,4 @@ Run your application
 go run ./hello.go
 ```
 
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/79a6528d-7b9f-4c1a-a470-51be85f04f2e" />
