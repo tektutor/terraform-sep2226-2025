@@ -17,7 +17,7 @@
 ```
 cd ~/terraform-sep2226-2025
 git pull
-cd Day1/ansible/role
+cd Day2/ansible/role
 ansible init nginx
 tree nginx
 
