@@ -544,17 +544,18 @@ go run ./error-handling.go
 
 Create a file named functions.go with the below code
 <pre>
-	
 package main
 
 import "fmt"
 
 func yetAnotherFunction() {
-     fmt.Println("Yet Another Funciton invoked")
+     fmt.Println("Yet Another Function invoked")
 }
 
 func main() {
-
+	fmt.Println( sayHello("Golang") )
+	fmt.Println( sayHello("World") )
+	yetAnotherFunction()
 }
 
 //This function accepts a string input argument and returns a string output
@@ -567,6 +568,7 @@ func sayHello() string {
    return "Hello World !"
 }
 */
+
 
 </pre>
 
