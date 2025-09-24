@@ -8,7 +8,7 @@
 - it helps you provision containers, manage images, provision virtual machines locally or on public cloud, etc.,
 - it can be used provision storage cluster, etc.,
 - it can be used to provision eks, aks, ROSA, ARO on public cloud
-- unlike the AWS cloudformation it works on any environment and any cloud
+- unlike the AWS cloudformation,  Terraform works on any environment and any cloud
 - it comes in 2 flavours
   1. Terraform core ( command-line only - opensource and free )
   2. Terraform Enterprise ( Web console and it is a paid tool )
