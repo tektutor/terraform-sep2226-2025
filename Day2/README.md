@@ -540,3 +540,39 @@ go run ./error-handling.go
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/156d9430-086e-4a62-9fbf-b1e187f35193" />
 
+## Lab - Golang user-defined functions
+
+Create a file named functions.go with the below code
+<pre>
+	
+package main
+
+import "fmt"
+
+func yetAnotherFunction() {
+     fmt.Println("Yet Another Funciton invoked")
+}
+
+func main() {
+
+}
+
+//This function accepts a string input argument and returns a string output
+func sayHello( msg string ) string {
+  return "Hello, " + msg + " !"
+}
+
+/* function overloading is not supported in golang
+func sayHello() string {
+   return "Hello World !"
+}
+*/
+
+</pre>
+
+Run it
+```
+go run ./functions.go
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a4d62eb0-fc09-4475-ae6b-ebe79f6f0bd3" />
+
