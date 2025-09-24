@@ -90,6 +90,16 @@ cat terraform.tfsate
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/bd6a1af6-e155-404d-99ee-8a9ef6d6a000" />
 
 ## Lab - Provisioning container using Terraform
+
+Create a separate folder for each exercise
+```
+cd ~
+mkdir provision-docker-containers
+cd provision-docker-containers
+touch providers.tf main.tf
+tree
+```
+
 Create a file named providers.tf with the below code
 <pre>
 terraform {
