@@ -156,7 +156,7 @@ Click "Add"
 <pre>
 Under the Name, type "TekTutor Training Repository"
 Under the Source Code Type, select "Git"
-Under the Source Control url, type "https://github.com/tektutor/terraform-may-2025.git"
+Under the Source Control url, type "https://github.com/tektutor/terraform-sep2226-2025.git"
 Under the Source Control Branch/Tag/Commit, type "main"
 Under the Options, enable the check box that says "Update Revision on Launch"
 </pre>
