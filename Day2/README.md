@@ -393,3 +393,64 @@ go run ./hello.go
 ```
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/79a6528d-7b9f-4c1a-a470-51be85f04f2e" />
+
+## Lab - Accepting user inputs
+
+Create a file named userinputs.go with the below content
+<pre>
+package main
+
+import "fmt"
+
+func main() {
+	//The below line declares variables named x and y and initializes them with value 0
+	x := 0
+
+	//This is yet another way we can declare variables in go lang
+	var y int
+
+	//This is an ansignment
+	y = 0
+
+	fmt.Print("Enter your first integer input :" )
+	fmt.Scanf("%d", &x)
+
+	fmt.Print("Enter your second integer input :" )
+	fmt.Scanf("%d", &y)
+
+	fmt.Println("Value of x :", x )
+	fmt.Println("Value of y :", y )
+
+	var temp string
+	fmt.Println("Press any key to exit ...")
+	fmt.Scanln(&temp)
+}  
+</pre>
+
+Run it
+```
+go run ./userinputs.go
+```
+
+## Lab - If else
+Create file named if-else.go with the below code
+```
+package main
+
+import "fmt"
+
+func main() {
+	x := 100
+
+	if x % 2 == 0 {
+	    fmt.Println(x, "is an even number")
+	} else {
+            fmt.Println(x, "is an odd number")
+	}
+}
+```
+
+Run it
+```
+go run ./if-else.go
+```
