@@ -77,8 +77,10 @@ Then let's download the docker provider using the below command
 ```
 terraform init
 tree .terraform
+terraform plan
 ```
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8c19f2a2-d6cc-4c16-91ff-ede9619bff7d" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/199b680e-ddcd-45f1-b6b9-9aced8aad60a" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b4a5a745-cc46-4397-8b83-a2fb9ab0da92" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/24fb6f90-fc8e-4950-93a1-db931c224ceb" />
