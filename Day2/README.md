@@ -658,4 +658,4 @@ go run ./loops.go
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1229fbf2-d47f-4022-8580-a5f50f6f5993" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/dfd996b9-1bec-4621-a15c-0052d5b0b9f3" />
-![Uploading image.png…]()
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b706203b-6e84-4cc0-b654-80444d24b7d8" />
