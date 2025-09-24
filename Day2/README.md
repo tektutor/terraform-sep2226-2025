@@ -972,3 +972,49 @@ go run ./main.go
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/7137533e-c50d-4f36-9ed0-bc9b2eaa244d" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2561001d-d74e-443a-a42b-e45655a6ed17" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/5a838dc2-3af9-49bd-b8f7-742c56bbde9c" />
+
+## Lab - Golang concurrency
+Create a file named concurrency.go with the below code
+<pre>
+package main
+
+import (
+   "fmt"
+   "time"
+)
+
+func firstFunction( count int ) {
+	for i := 0; i < count; i++ {
+           fmt.Println ("First function ", i )
+	   time.Sleep ( time.Millisecond * 5 )
+	}
+}
+
+func secondFunction( count int ) {
+	for i := 0; i < count; i++ {
+           fmt.Println ("Second function ", i )
+	   time.Sleep ( time.Millisecond * 5 )
+	}
+}
+
+func main() {
+	fmt.Println ("Press any key to exit ...")
+
+	//Invoking firstFunction and secondFunction in sequence one after the other
+	firstFunction(10)
+	secondFunction(10)
+
+	//We wish to run both firstFunction and secondFunction in parallel
+	go firstFunction( 100 )
+	go secondFunction( 100 )
+
+	var tmp string
+	fmt.Scanln(&tmp)
+}	
+</pre>
+
+Run it
+```
+go run ./concurrency.go
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/4586b35a-66aa-4367-b36a-cf6f05b212ca" />
