@@ -52,4 +52,33 @@ terraform --version
   - docker_container
 </pre>
 
+## Lab - Downloading docker image using Terraform
+Create a file named main.tf with the below code
+<pre>
+terraform {
+  required_providers {
+    docker = {
+      source = "kreuzwerker/docker"
+      version = "3.6.2"
+    }
+  }
+}
 
+provider "docker" {
+  # Configuration options
+}
+
+resource "docker_image" "nginx_docker_image" {
+    name = "bitnami/nginx:latest"
+}  
+</pre>
+
+Then let's download the docker provider using the below command
+```
+terraform init
+tree .terraform
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8c19f2a2-d6cc-4c16-91ff-ede9619bff7d" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/199b680e-ddcd-45f1-b6b9-9aced8aad60a" />
+![Uploading image.png…]()
