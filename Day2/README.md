@@ -963,7 +963,7 @@ Run it
 ```
 cd ~/custom-go-module
 go mod edit --replace addition=./addition //This helps golang to locate the addition module otherwise it fails to download
-go mod edit --replace subtraction=./substraction //This helps golang to locate the addition module otherwise it fails to download
+go mod edit --replace subtraction=./subtraction //This helps golang to locate the addition module otherwise it fails to download
 go mod tidy //This will download all the dependent modules of main.go and any other *.go files in sub-folders recursively
 
 go run ./main.go
