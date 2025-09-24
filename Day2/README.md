@@ -544,17 +544,18 @@ go run ./error-handling.go
 
 Create a file named functions.go with the below code
 <pre>
-	
 package main
 
 import "fmt"
 
 func yetAnotherFunction() {
-     fmt.Println("Yet Another Funciton invoked")
+     fmt.Println("Yet Another Function invoked")
 }
 
 func main() {
-
+	fmt.Println( sayHello("Golang") )
+	fmt.Println( sayHello("World") )
+	yetAnotherFunction()
 }
 
 //This function accepts a string input argument and returns a string output
@@ -567,6 +568,7 @@ func sayHello() string {
    return "Hello World !"
 }
 */
+
 
 </pre>
 
@@ -658,4 +660,88 @@ go run ./loops.go
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1229fbf2-d47f-4022-8580-a5f50f6f5993" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/dfd996b9-1bec-4621-a15c-0052d5b0b9f3" />
-![Uploading image.png…]()
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b706203b-6e84-4cc0-b654-80444d24b7d8" />
+
+## Lab - Golang map
+
+Create a file named map.go with below code
+<pre>
+package main
+
+import "fmt"
+
+func main() {
+
+	//key,value can be of different data type
+	toolsPath := map[string]string {
+		"java_home": "/usr/lib/jdk11",
+		"mvn_home" : "/usr/share/maven",
+	}
+
+	fmt.Println("Java home directory ", toolsPath["java_home"])
+
+	//add a key,value pair into an existing map
+	toolsPath["go_home"] = "/usr/go"
+
+	//iterating a map and printing its values
+	for key,value := range toolsPath {
+          fmt.Println(key,value)
+	}
+
+	//delete a key-vaule pair from an existing map
+	delete(toolsPath, "go_home")
+	fmt.Println(toolsPath)
+}	
+</pre>
+
+Run it
+```
+go run ./map.go
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b483c611-d89f-4889-8f4c-c57cd5b18c96" />
+
+## Lab - Golang pointers
+Create a filed named pointer.go with the below code
+<pre>
+package main
+
+import "fmt"
+
+func sayHello ( msgPtr *string ) {
+
+	//Dereferencing - the values stored at address pointed by msgPtr will be printed here
+	fmt.Println( "Inside sayHello funciton", *msgPtr )
+
+	//Here the address pointed by msgPtr pointer will be printed
+	fmt.Println("Address pointed by msgPtr is", msgPtr )
+
+	//Print the address of msgPtr
+	fmt.Println("Address of msgPtr is", &msgPtr )
+
+	//The values stored at the address pointed by msgPtr is assigned to tmp string
+	tmp := *msgPtr
+
+	//We are changing the value stored at address pointed by msgPtr pointer
+	*msgPtr = tmp + " Golang" + " !"
+
+	fmt.Println("Inside sayHello before returning ", *msgPtr)
+
+}
+
+func main() {
+   //declares a string variable name str with value "Hello"
+   msg := "Hello"
+
+   fmt.Println("Message before calling sayHello function is ", msg )
+   fmt.Println("Address of msg string is ", &msg )
+
+   sayHello( &msg )
+
+   fmt.Println("Message after calling sayHello function is ", msg )
+}
+</pre>
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c4234890-f981-4cf5-9899-853abbffa2f1" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/82e848e5-53f9-4520-b3f7-2594337c9ea3" />
+
