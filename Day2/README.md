@@ -745,3 +745,50 @@ func main() {
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c4234890-f981-4cf5-9899-853abbffa2f1" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/82e848e5-53f9-4520-b3f7-2594337c9ea3" />
 
+## Lab - Golang struct with Methods
+Create a file named struct.go with the below code
+<pre>
+package main
+
+import "fmt"
+
+type Rectangle struct {
+  length int
+  width  int
+}
+
+//Method - these are functions that can only be invoked via struct variables
+//Area is member function of Rectangle structure
+//Area function takes zero arguments and it return an integer
+func ( rect Rectangle ) Area() int {
+   area := rect.length * rect.width
+   return area
+}
+
+func ( rect Rectangle ) GetLength() int {
+   return rect.length
+}
+
+func ( rect Rectangle ) GetWidth() int {
+   return rect.width
+}
+
+func main() {
+     rectangle := Rectangle {
+        length: 100,
+	width : 200,
+     }
+
+     fmt.Printf("Length of rectangle : %d\n", rectangle.GetLength() )
+     fmt.Printf("Width  of rectangle : %d\n", rectangle.GetWidth () )
+     fmt.Printf("Area of rectangle   : %d\n", rectangle.Area() )
+}	
+</pre>
+
+Run it
+```
+go run ./struct.go
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/19215565-faff-43ed-bd0c-3be81cb6e353" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/fb4ba20a-baa3-42a9-9691-429e86671234" />
+
