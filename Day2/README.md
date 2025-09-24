@@ -1,4 +1,4 @@
-# Day 2
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/774ad9be-8078-4a2f-9291-36af0c0acbf3" /># Day 2
 
 ## Info - Ansible role
 <pre>
@@ -502,3 +502,41 @@ Run it
 ```
 go run ./array.go
 ```
+
+## Lab - Golang error-handling
+
+Create a file named error-handling.go with below code
+<pre>
+package main
+
+import (
+  "fmt"
+  "os"
+  "os/user"
+  "github.com/sttk/stringcase"
+)
+
+func main() {
+    u, err := user.Current()
+
+    if err != nil {
+       fmt.Println("Cannot get current user:", err)
+       os.Exit(1)
+    }
+
+    fmt.Printf("Hello %s, welcome !\n", stringcase.PascalCase(u.Username) )
+}	
+</pre>
+
+Run it
+```
+ls
+go mod init main
+cat go.mod
+go mod tidy
+cat go.mod
+go run ./error-handling.go
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/156d9430-086e-4a62-9fbf-b1e187f35193" />
+
