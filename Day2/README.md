@@ -701,3 +701,47 @@ go run ./map.go
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b483c611-d89f-4889-8f4c-c57cd5b18c96" />
 
+## Lab - Golang pointers
+Create a filed named pointer.go with the below code
+<pre>
+package main
+
+import "fmt"
+
+func sayHello ( msgPtr *string ) {
+
+	//Dereferencing - the values stored at address pointed by msgPtr will be printed here
+	fmt.Println( "Inside sayHello funciton", *msgPtr )
+
+	//Here the address pointed by msgPtr pointer will be printed
+	fmt.Println("Address pointed by msgPtr is", msgPtr )
+
+	//Print the address of msgPtr
+	fmt.Println("Address of msgPtr is", &msgPtr )
+
+	//The values stored at the address pointed by msgPtr is assigned to tmp string
+	tmp := *msgPtr
+
+	//We are changing the value stored at address pointed by msgPtr pointer
+	*msgPtr = tmp + " Golang" + " !"
+
+	fmt.Println("Inside sayHello before returning ", *msgPtr)
+
+}
+
+func main() {
+   //declares a string variable name str with value "Hello"
+   msg := "Hello"
+
+   fmt.Println("Message before calling sayHello function is ", msg )
+   fmt.Println("Address of msg string is ", &msg )
+
+   sayHello( &msg )
+
+   fmt.Println("Message after calling sayHello function is ", msg )
+}
+</pre>
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c4234890-f981-4cf5-9899-853abbffa2f1" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/82e848e5-53f9-4520-b3f7-2594337c9ea3" />
+
