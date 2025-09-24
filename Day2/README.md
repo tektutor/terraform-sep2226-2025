@@ -18,7 +18,7 @@
 cd ~/terraform-sep2226-2025
 git pull
 cd Day2/ansible/role
-ansible init nginx
+ansible-galaxy init nginx
 tree nginx
 
 cp scripts/default nginx/files
