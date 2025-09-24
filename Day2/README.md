@@ -576,3 +576,28 @@ go run ./functions.go
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a4d62eb0-fc09-4475-ae6b-ebe79f6f0bd3" />
 
+## Lab - Golang user-defined function that returns multiple values
+Create a file named function-with-multiple-returns.go with below code
+<pre>
+package main
+
+import "fmt"
+
+func myFunction() (int,int) {
+  return 10, 20
+}
+
+func main() {
+   x, y := myFunction() // := is a short form of declaring a new variable and initialized with some value
+
+   fmt.Println( "Value of x is ", x )
+   fmt.Println( "Value of y is ", y )
+}	
+</pre>
+
+Run it
+```
+go run ./functions-with-multiple-returns.go
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c089e5c2-84ca-4903-84d1-a02d9cd67000" />
