@@ -601,3 +601,61 @@ go run ./functions-with-multiple-returns.go
 ```
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c089e5c2-84ca-4903-84d1-a02d9cd67000" />
+
+## Lab - Golang loops
+
+Create a file named loops.go with below code
+<pre>
+package main
+
+import "fmt"
+
+func main() {
+
+	//Declares a count variable of type int and assigns a value 5
+	count := 5
+
+	//similar to while loop
+	for count > 0 {
+		fmt.Println("Before decrementing ", count)
+
+		count--  //equivalent to count = count - 1
+		//golang doesn't support pre-decrement or pre-increment unlike C or C++
+
+		fmt.Println("After decrementing ", count )
+	}
+	fmt.Println("Value of count is ", count, " after for loop")
+
+	//Resetting already declared variable count with value 0
+	count = 0
+
+	fmt.Println()
+	//Regular for loop
+	for count=1; count<10; count++ {
+           fmt.Printf( "%d\t", count )
+	}
+	fmt.Println()
+
+	count = 0
+
+	//similar to do while - infinite loop
+	for {
+
+		fmt.Printf("Inside for loop %d\n", count )
+		count++
+
+		if count > 3 {
+		   break
+		}
+	}
+	fmt.Println("Control reached outside infinite for loop")
+}
+</pre>
+
+Run it
+```
+go run ./loops.go
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1229fbf2-d47f-4022-8580-a5f50f6f5993" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/dfd996b9-1bec-4621-a15c-0052d5b0b9f3" />
+![Uploading image.png…]()
