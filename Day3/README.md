@@ -88,3 +88,47 @@ cat terraform.tfsate
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/24fb6f90-fc8e-4950-93a1-db931c224ceb" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/031e5f7e-db91-48d2-91a8-3b74999c6231" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/bd6a1af6-e155-404d-99ee-8a9ef6d6a000" />
+
+## Lab - Provisioning container using Terraform
+Create a file named providers.tf with the below code
+<pre>
+terraform {
+  required_providers {
+    docker = {
+      source = "kreuzwerker/docker"
+      version = "3.6.2"
+    }
+  }
+}
+
+provider "docker" {
+  # Configuration options
+} 
+</pre>
+
+Create a file named main.tf with the below code
+<pre>
+data "docker_image" "bitnami_nginx_image" {
+   name = "bitnami/nginx:latest"
+}
+
+resource "docker_container" "my_nginx1_container" {
+   name = "nginx_container_1"
+   image = data.docker_image.bitnami_nginx_image.name
+}
+
+resource "docker_container" "my_nginx2_container" {
+   name = "nginx_container_2"
+   image = data.docker_image.bitnami_nginx_image.name
+}  
+</pre>
+
+You may download the providers and do the terraform provisioning
+```
+terraform init
+terraform plan
+terraform apply --auto-approve
+terraform show
+docker images  | grep nginx
+docker ps
+```
