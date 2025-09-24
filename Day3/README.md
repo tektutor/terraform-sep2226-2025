@@ -79,6 +79,7 @@ terraform init
 tree .terraform
 terraform plan
 terraform apply
+cat terraform.tfsate
 ```
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8c19f2a2-d6cc-4c16-91ff-ede9619bff7d" />
@@ -86,3 +87,4 @@ terraform apply
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b4a5a745-cc46-4397-8b83-a2fb9ab0da92" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/24fb6f90-fc8e-4950-93a1-db931c224ceb" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/031e5f7e-db91-48d2-91a8-3b74999c6231" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/bd6a1af6-e155-404d-99ee-8a9ef6d6a000" />
