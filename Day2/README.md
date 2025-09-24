@@ -1018,3 +1018,6 @@ Run it
 go run ./concurrency.go
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/4586b35a-66aa-4367-b36a-cf6f05b212ca" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b5f7f62b-70cd-4839-b2d4-9d5d5cea95ed" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/86c4b7a7-3306-44bb-8931-02d40d1d7365" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8af5769a-3fdc-4498-ab87-6d12b95cf85b" />
