@@ -220,6 +220,7 @@ docker inspect nginx3
 
 Import the nginx3 meta-data into terraform empty resource block
 ```
+terraform init
 terraform import resource.docker_container.nginx_container_3 01f946755114bdf55786f0a1bcf573a1c43ec81cb808232daccbb976382ac201
 ```
 
