@@ -12,21 +12,18 @@ provider "docker" {
 } 
 
 resource "docker_container" "nginx_container_1" {
-  image = "bitnami/nginx:latest"
-  name  = "nginx1"
-  hostname  = "nginx1"
+  name = "nginx4"
+  image = "bitnami/nginx:1.20"
 }
 
 resource "docker_container" "nginx_container_2" {
+  name = "nginx2"
   image = "bitnami/nginx:latest"
-  name  = "nginx2"
-  hostname  = "nginx2"
 }
 
 
 resource "docker_container" "nginx_container_3" {
+  name = "nginx3"
   image = "bitnami/nginx:latest"
-  name  = "nginx3"
-  hostname  = "nginx3"
 }
 
