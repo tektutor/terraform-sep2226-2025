@@ -377,5 +377,4 @@ terrform destroy --auto-approve
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0a9fb552-d726-4901-a8ef-e237c2dcb4f4" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1f849680-141e-4a21-af4a-83200c57ad53" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e80697cd-a553-4344-9123-119a77d5e60d" />
-
-eight="1168" alt="image" src="https://github.com/user-attachments/assets/7553b244-2962-4ba7-86c7-f154b6811013" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ddc9be6d-6bf4-48e1-b6b5-0d2992601bb4" />
