@@ -1,2 +1,0 @@
-- name: Start nginx web server in Ubuntu ansible node
-  service: name=nginx state=started

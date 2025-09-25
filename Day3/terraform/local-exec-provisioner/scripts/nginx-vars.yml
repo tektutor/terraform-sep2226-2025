@@ -1,3 +1,0 @@
-greeting_msg: "Welcome to DevOps!"
-provisioner_tool: "Docker"
-conf_mgr_tool: "Ansible"
