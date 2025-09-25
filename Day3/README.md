@@ -366,6 +366,27 @@ terrform destroy --auto-approve
 
 ## Lab - Invoking ansible-playbooking using terraform local-exec provisioner block
 ```
+mkdir ~/terraform-local-exec-provisioner
+cd ~/terraform-local-exec-provisioner
+ls -l
+cat ansible.cfg
+cat dynamic_inventory.py
+cat inputs.tf
+cat outpus.tf
+cat main.tf
+cat providers.tf
+docker images | grep nginx
+docker ps -a
+
+terraform init
+terraform plan
+terraform apply --auto-approve
+terraform show
+docker images | grep nginx
+docker ps -a
+
+curl http://localhost:8001
+curl http://localhost:8002
 ```
 
 <img width="1920" h<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/bf57bfc7-7240-403c-a177-346e28afdf0f" />
