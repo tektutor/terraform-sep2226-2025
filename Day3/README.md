@@ -363,3 +363,19 @@ terrform destroy --auto-approve
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ded177f7-478d-41cd-9b37-129711c9aaf7" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/849dc156-5944-487b-b98f-29cadd4d6b3c" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c60635ee-7a2b-4028-ba47-c39934b006d2" />
+
+## Lab - Invoking ansible-playbooking using terraform local-exec provisioner block
+```
+```
+
+<img width="1920" h<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/bf57bfc7-7240-403c-a177-346e28afdf0f" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1b34ac58-b4c2-4266-bc14-cbb5b833a45c" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/94fe16c9-cd0b-422b-b639-844830a6c910" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9cc7080d-4e40-4c97-a586-7c008fa2a308" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/99dd188d-bf36-4cd6-872e-b85f585bcacc" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/5abe98c2-5ae2-4f8c-8605-646a1dd86d1a" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0a9fb552-d726-4901-a8ef-e237c2dcb4f4" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1f849680-141e-4a21-af4a-83200c57ad53" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e80697cd-a553-4344-9123-119a77d5e60d" />
+
+eight="1168" alt="image" src="https://github.com/user-attachments/assets/7553b244-2962-4ba7-86c7-f154b6811013" />
