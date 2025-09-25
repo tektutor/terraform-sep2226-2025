@@ -12,12 +12,12 @@ resource "docker_container" "my_ubuntu_container1" {
 
   ports {
      internal = "22"
-     external = "2001"
+     external = "2009"
   }
 
   ports {
      internal = "80"
-     external = "8001"
+     external = "8009"
   }
   
   depends_on = [
@@ -31,12 +31,12 @@ resource "docker_container" "my_rocky_container1" {
 
   ports {
      internal = "22"
-     external = "2002"
+     external = "2007"
   }
 
   ports {
      internal = "80"
-     external = "8002"
+     external = "8007"
   }
 
   depends_on = [
