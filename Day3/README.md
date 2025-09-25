@@ -253,7 +253,7 @@ docker ps -a
 Create a folder
 ```
 mkdir -p ~/terraform-input-and-output-variables
-cd terraform-input-and-output-variables
+cd ~/terraform-input-and-output-variables
 ```
 
 Create a file named inputs.tf with the below code
@@ -350,7 +350,16 @@ terraform show
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/bb317b16-d5ec-42f0-b914-4082911c45f2" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/84acd74c-951e-4fbe-bed0-99f55dc719db" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ecbc419e-d575-4686-b1ca-3f4e653b882e" />
-
-
-
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/04eb1d86-b1e6-40b1-9143-4325e9076166" />
+
+Once you are done with this exercise, you can dispose the resources as shown below
+```
+cd ~/terraform-input-and-output-variables
+terrform destroy --auto-approve
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8f59cfb1-c40c-4a4e-bc39-0ed49883eea9" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8950ca4f-07e7-4054-a52c-4b0b5005c76f" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ded177f7-478d-41cd-9b37-129711c9aaf7" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/849dc156-5944-487b-b98f-29cadd4d6b3c" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c60635ee-7a2b-4028-ba47-c39934b006d2" />
