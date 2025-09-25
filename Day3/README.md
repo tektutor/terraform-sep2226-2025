@@ -142,3 +142,88 @@ terraform show
 docker images  | grep nginx
 docker ps
 ```
+
+## Lab - Importing existing resources into Terraform
+Create a file named main.tf with the below code
+<pre>
+terraform {
+  required_providers {
+    docker = {
+      source = "kreuzwerker/docker"
+      version = "3.6.2"
+    }
+  }
+}
+
+provider "docker" {
+  # Configuration options
+} 
+
+resource "docker_container" "nginx_container_1" {
+}
+
+resource "docker_container" "nginx_container_2" {
+}
+
+
+resource "docker_container" "nginx_container_3" {
+}
+</pre>
+
+Then find the container id of nginx1
+```
+docker ps
+docker inspect nginx1
+```
+
+Import the nginx1 meta-data into terraform empty resource block
+```
+terraform import resource.docker_container.nginx_container_1 db5f7f1b10bce6bb630960d82b0c5d6b83c9d7a5d9dcb413ca3718d54af7c4ae
+```
+
+Then find the container id of nginx2
+```
+docker ps
+docker inspect nginx2
+```
+
+Import the nginx2 meta-data into terraform empty resource block
+```
+terraform import resource.docker_container.nginx_container_2 ecdbe2a586b043a8cb81b41810f43475cde6a7d2b5ff5f0cc7f41857db69f4f6
+```
+
+Then find the container id of nginx2
+```
+docker ps
+docker inspect nginx3
+```
+
+Import the nginx3 meta-data into terraform empty resource block
+```
+terraform import resource.docker_container.nginx_container_3 01f946755114bdf55786f0a1bcf573a1c43ec81cb808232daccbb976382ac201
+```
+
+Now you can the terraform state file
+```
+cat terraform.tfstate
+```
+
+Based on the terraform state file, you can fill up the main.tf mandatory fields for resource.docker_container.nginx_container_1, resource.docker_container.nginx_container_2 and resource.docker_container.nginx_container_3.
+
+Moving forward, you can now manage nginx1, nginx2 and nginx3 using the terraform manifest scripts.
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8feeb208-04cf-4b01-8da4-f9ffd13367d9" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f67155e0-251e-4de5-b848-cd30a2611784" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/5b6b116e-0f4b-4d92-98b6-0a21543f82fa" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/4448fc10-50ea-4fcd-9495-9adddf14dfed" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/06d7a298-3b0b-42af-a485-ab278e4dd8b6" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/43219751-e974-4f54-8f93-594683bcdfba" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e77ef3a9-bb45-44cb-a28b-5cc6b90f217c" />
+
+Once you are done with this exercise, you may dispose the resources managed by terraform.
+```
+terraform destroy --auto-approve
+docker images | grep nginx
+docker ps -a
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/04eb1d86-b1e6-40b1-9143-4325e9076166" />
