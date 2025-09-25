@@ -247,4 +247,110 @@ terraform destroy --auto-approve
 docker images | grep nginx
 docker ps -a
 ```
+
+## Lab - Terraform Input and output variables
+
+Create a folder
+```
+mkdir -p ~/terraform-input-and-output-variables
+cd terraform-input-and-output-variables
+```
+
+Create a file named inputs.tf with the below code
+<pre>
+variable "container_name1" {
+   description = "Name of the container"
+   type = string
+   default = "ubuntu_c1"
+}
+
+variable "container_name2" {
+   description = "Name of the container"
+   type = string
+   default = "rocky_c1"
+}
+  
+</pre>
+
+Create a file named outputs.tf with the below code
+<pre>
+output "container1_id" {
+  value = docker_container.my_ubuntu_container1.id
+}
+
+output "container2_id" {
+  value = docker_container.my_rocky_container1.id
+}
+
+output "container_name1" {
+   value = docker_container.my_ubuntu_container1.name
+}
+
+output "container_name2" {
+   value = docker_container.my_rocky_container1.name
+}
+
+output "container1_ip" {
+   value = docker_container.my_ubuntu_container1.network_data[0].ip_address
+}
+output "container2_ip" {
+   value = docker_container.my_rocky_container1.network_data[0].ip_address
+}  
+</pre>
+
+Create a file named main.tf with the below code
+<pre>
+data "docker_image" "tektutor_ansible_ubuntu_image" {
+  name = "tektutor/ubuntu-ansible-node:latest"
+}
+
+data "docker_image" "tektutor_ansible_rocky_image" {
+  name = "tektutor/rocky-ansible-node:latest"
+}
+
+resource "docker_container" "my_ubuntu_container1" {
+  image = data.docker_image.tektutor_ansible_ubuntu_image.name
+  name =  var.container_name1
+}
+
+resource "docker_container" "my_rocky_container1" {
+  image = data.docker_image.tektutor_ansible_rocky_image.name
+  name =  var.container_name2
+}  
+</pre>
+
+Create a file named providers.tf with the below code
+<pre>
+terraform {
+  required_providers {
+    docker = {
+      source = "kreuzwerker/docker"
+      version = "3.6.2"
+    }
+  }
+}
+
+provider "docker" {
+  # Configuration options
+}   
+</pre>
+
+Now you can run the below commands
+```
+terraform init
+terraform plan
+terraform apply --auto-approve
+terraform show
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/73cdb769-50ec-4dc6-89e8-6a84a48554c5" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/616ec0c6-809e-4343-a3b9-4091ae1da67b" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/6cfcc0e1-7876-4a23-96ee-450640c1c652" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/5f2f8608-3dcc-4a2f-8e42-b236e994cd2e" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ec12caeb-1ae2-40a6-8592-64f88e7a45cf" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/bb317b16-d5ec-42f0-b914-4082911c45f2" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/84acd74c-951e-4fbe-bed0-99f55dc719db" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ecbc419e-d575-4686-b1ca-3f4e653b882e" />
+
+
+
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/04eb1d86-b1e6-40b1-9143-4325e9076166" />
