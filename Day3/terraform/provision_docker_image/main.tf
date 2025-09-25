@@ -1,0 +1,16 @@
+terraform {
+  required_providers {
+    docker = {
+      source = "kreuzwerker/docker"
+      version = "3.6.2"
+    }
+  }
+}
+
+provider "docker" {
+  # Configuration options
+}
+
+resource "docker_image" "nginx_docker_image" {
+    name = "bitnami/nginx:latest"
+}
