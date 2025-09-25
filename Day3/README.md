@@ -144,6 +144,26 @@ docker ps
 ```
 
 ## Lab - Importing existing resources into Terraform
+First of all, we need ensure the bitnami/nginx:latest image is available in your local docker registry
+```
+docker images | grep nginx
+```
+
+Then, ensure the nginx1, nginx2 and nginx3 containers are created
+```
+docker run -d --name nginx1 --hostname nginx1 bitnami/nginx:latest
+docker run -d --name nginx2 --hostname nginx2 bitnami/nginx:latest
+docker run -d --name nginx3 --hostname nginx3 bitnami/nginx:latest
+docker ps
+```
+
+Create a folder 
+```
+cd ~
+mkdir -p terraform-import-already-provisioned-resources
+cd terraform-import-already-provisioned-resources
+```
+
 Create a file named main.tf with the below code
 <pre>
 terraform {
