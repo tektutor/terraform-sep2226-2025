@@ -1,0 +1,4 @@
+- name: Configure nginx web server to server pages from our custom folder in Rocky 
+  copy: src=nginx.conf dest=/etc/nginx/nginx.conf
+  notify:
+  - Restart nginx web server in Rocky to apply config changes
