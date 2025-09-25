@@ -2,7 +2,7 @@
 
 ## Lab - Terraform Workspace
 <pre>
-cd ~/terraform-sep-2025
+cd ~/terraform-sep2226-2025
 git pull
 cd Day4/terraform-workspace
 terraform init
