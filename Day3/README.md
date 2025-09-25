@@ -400,3 +400,16 @@ curl http://localhost:8002
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e80697cd-a553-4344-9123-119a77d5e60d" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ddc9be6d-6bf4-48e1-b6b5-0d2992601bb4" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0e9018c4-90e1-4026-9701-ec2bdd67d28f" />
+
+Once you are done with this exercise, you may dispose the resources provisioned by terraform
+```
+terraform destroy --auto-approve
+docker images | grep nginx
+docker ps -a
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d62b8b50-6c2c-4c44-9c81-5eec1a4a68c4" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b03412a6-25c7-4080-a518-9aedfa4187b4" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e3f7f93b-bfda-4b6d-bd27-486b79b5e5f9" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/13a7f0b4-d235-431a-90e5-04b8a88a9e72" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2d1e9841-7ebf-441b-a6bd-c93a684efc54" />
