@@ -431,3 +431,14 @@ docker ps
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/6fa860f9-9e72-4a65-a09c-d5d611c6ef34" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a4d0a976-1668-4d4d-9c78-a6ddb0c632a7" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b30523ec-2f7a-42a4-951c-9067c10beb27" />
+
+Once you are done with this exercise, you may dispose the resources provisioned by Terraform
+```
+cd ~/terraform-sep2226-2025
+git pull
+cd Day3/terraform/remote-exec-provisioner
+terraform destroy --auto-approve
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f094118d-ed4e-4d0d-9d98-428a1a41e79c" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1bc3ddf0-dfa3-417a-b591-0ac8adad5050" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/61f69acd-e678-44c6-a1eb-72d137f3f47a" />
