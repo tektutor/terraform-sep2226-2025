@@ -1,4 +1,4 @@
-# Day 3
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/6d30e3fc-31a7-4bab-bbc8-a97efba00d3b" /># Day 3
 
 ## Info - Terraform Overview
 <pre>
@@ -413,3 +413,21 @@ docker ps -a
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e3f7f93b-bfda-4b6d-bd27-486b79b5e5f9" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/13a7f0b4-d235-431a-90e5-04b8a88a9e72" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2d1e9841-7ebf-441b-a6bd-c93a684efc54" />
+
+## Lab - Terraform remote-exec provisioner block
+```
+cd ~/terraform-sep2226-2025
+git pull
+cd Day3/terraform/remote-exec-provisioner
+docker rm -f $(docker ps -aq)
+terraform init
+terraform validate
+terraform plan
+terraform apply --auto-approve
+docker ps
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d21e22a3-ae41-4d7c-b4a2-c48fa1e95579" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/5e6afcb8-f218-4949-9d69-527d8931cf99" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/6fa860f9-9e72-4a65-a09c-d5d611c6ef34" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a4d0a976-1668-4d4d-9c78-a6ddb0c632a7" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b30523ec-2f7a-42a4-951c-9067c10beb27" />
