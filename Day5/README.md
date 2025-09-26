@@ -85,3 +85,45 @@ terraform destroy --auto-approve
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8c0e2d1b-9465-47c4-a783-1cf576361483" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/523bc9dd-fbbb-48d6-91bf-cddf989e469c" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/bcc19575-a480-4c6c-81b4-017fa7136611" />
+
+## Lab - Creating a custom terraform docker provider in golang
+Update your ~/.terraformrc file as shown below
+<pre>
+provider_installation {	
+    dev_overrides {
+    	"registry.terraform.io/tektutor/file" = "/home/student/go/bin",
+    	"registry.terraform.io/tektutor/docker" = "/home/student/go/bin",
+    }
+    direct{}
+}  
+</pre>	
+
+You can build the terraform docker provider and install it
+```
+cd ~/terraform-sep2226-2025
+git pull
+cd Day5/custom-terraform-providers/docker
+tree
+ls -l
+go build
+ls -l
+go install
+ls -l
+ls -l ~/go/bin
+```
+
+## Lab - Using our custom terraform docker provider in Terraform manifest script
+```
+cd ~/terraform-sep2226-2025
+git pull
+cd Day5/custom-terraform-providers/test-docker-custom-terraform-provider
+docker images | grep nginx
+docker ps -a
+cat main.tf
+terraform plan
+terraform apply --auto-approve
+terraform show
+docker images | grep nginx
+docker ps -a
+cat terraform.tfstate
+```
