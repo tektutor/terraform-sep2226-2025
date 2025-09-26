@@ -197,3 +197,59 @@ docker ps
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/327faa4e-2e70-4107-b10b-18bae18c6ad3" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0a233101-e433-4c95-9811-52bf32d72f09" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0a52b3a1-72f8-44da-8198-70a5445a360c" />
+
+## Info - Sentinel Overview
+<pre>
+- Sentinel is a policy-as-code framework developed by HashiCorp.
+- It lets you define and enforce fine-grained policies across infrastructure and application workflows.
+- Think of it as a guardrail system:
+  - Terraform manages your infrastructure.
+  - Sentinel enforces rules to ensure deployments follow your organization’s standards.  
+</pre>
+
+#### Motivation to use Policy-as-Code
+<pre>
+- Traditional governance relies on documents, manual reviews, or checklists. These are slow and error-prone.
+- With Sentinel, you write rules in code that are:
+  - Version-controlled (like Terraform files)
+  - Testable
+  - Automatically enforced during provisioning  
+</pre>
+
+#### Sentinel Policy Examples
+Sentinel policies are written in a custom language (inspired by HCL and JSON).
+
+Restricting Cloud Regions
+<pre>
+import "tfplan/v2" as tfplan
+
+main = rule {
+  all tfplan.resources.aws_instance as instances {
+    all instances as r {
+      r.applied.provider_config.region is "us-east-1"
+    }
+  }
+}
+</pre>
+
+Ensures all AWS instances are launched only in us-east-1.
+
+Enforce Minimum Instance Size
+<pre>
+import "tfplan/v2" as tfplan
+
+main = rule {
+  all tfplan.resources.aws_instance as instances {
+    all instances as r {
+      r.applied.instance_type in ["t2.medium", "t2.large", "m5.large"]
+    }
+  }
+}  
+</pre>
+
+Blocks provisioning of small/unsupported instance types.
+
+## Info - Install Jenkins and configuring Jenkins
+<pre>
+https://www.tektutor.org/ci-cd-with-maven-github-docker-jenkins/	
+</pre>
