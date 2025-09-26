@@ -116,6 +116,7 @@ ls -l ~/go/bin
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c08f4879-10f6-48dd-a6d1-7b1a8d2dfce0" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/31cf43b7-1470-4057-915b-dd24a61e02da" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/440a538f-eb2d-4b3d-b71e-55a4acc461b3" />
 
 
 ## Lab - Using our custom terraform docker provider in Terraform manifest script
@@ -133,3 +134,66 @@ docker images | grep nginx
 docker ps -a
 cat terraform.tfstate
 ```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/dacd3d32-bbda-4f83-a814-257c86d75a0e" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/11ab2a25-fe7a-4498-9526-a4dd4fd74994" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e3b64e68-1e41-4dd0-a9e4-e304a7abc139" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c58a150f-cbe7-4bf2-a891-a703823d8cff" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/cc0ece86-f20d-439a-9977-31997b02df17" />
+
+Update your main.tf as shown below
+<pre>
+terraform {
+  required_providers {
+    docker = {
+      source = "tektutor/docker"
+    }
+  }
+}
+
+resource "docker_image" "nginx" {
+  image_name = "bitnami/nginx:latest"
+}
+
+resource "docker_container" "ubuntu_container" {
+   container_name = "ubuntu_c1"
+   host_name = "c1"
+   image_name = "tektutor/ubuntu-ansible-node:latest"
+}
+
+resource "docker_container" "rocky_container" {
+   container_name = "ubuntu_c2"
+   host_name = "c2"
+   image_name = "tektutor/rocky-ansible-node:latest"
+}	
+</pre>
+
+Check the plan and apply
+```
+terraform plan
+terraform apply --auto-approve
+docker images | grep nginx
+docker ps
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/871fca64-d47b-4394-b9c6-39fb49861d05" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/78849f19-3a20-4551-abe6-a643f77893af" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1aca91bc-6c18-47a9-a99f-3cfac59997dd" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9e7f6782-55c5-4a41-b9ee-fcbd0123a6fa" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/20eaf5cd-9c40-4c5b-ab54-d6bd2c4c7e32" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/038153e6-0847-4410-81e0-401d5af8c9df" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/fc2df04d-6aeb-415d-96f5-90a2ec081cdf" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/38a3e98d-4651-472d-81b4-fd8482c88c4a" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/4623156b-a6eb-4954-a12d-d3105c1b83d1" />
+
+Once you are done with this exercise, you may dispose the resource created using terraform
+```
+docker image | grep nginx
+docker ps
+terraform destroy --auto-approve
+docker image | grep nginx
+docker ps
+
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/327faa4e-2e70-4107-b10b-18bae18c6ad3" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0a233101-e433-4c95-9811-52bf32d72f09" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0a52b3a1-72f8-44da-8198-70a5445a360c" />
