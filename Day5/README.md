@@ -248,3 +248,8 @@ main = rule {
 </pre>
 
 Blocks provisioning of small/unsupported instance types.
+
+## Info - Install Jenkins and configuring Jenkins
+<pre>
+https://www.tektutor.org/ci-cd-with-maven-github-docker-jenkins/	
+</pre>
