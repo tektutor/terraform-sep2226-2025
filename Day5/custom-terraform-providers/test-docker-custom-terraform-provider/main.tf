@@ -11,13 +11,13 @@ resource "docker_image" "nginx" {
 }
 
 resource "docker_container" "ubuntu_container" {
-   container_name = "c1"
+   container_name = "ubuntu_c1"
    host_name = "c1"
    image_name = "tektutor/ubuntu-ansible-node:latest"
 }
 
 resource "docker_container" "rocky_container" {
-   container_name = "c2"
+   container_name = "ubuntu_c2"
    host_name = "c2"
    image_name = "tektutor/rocky-ansible-node:latest"
 }
