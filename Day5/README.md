@@ -74,3 +74,14 @@ resource "localfile" "myfile" {
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/63c38cbc-582c-4cf2-8644-ed8cb4e5f2b7" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ed060833-cb8b-41a8-b903-886907835fdb" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/15514292-aed1-41fe-a961-c069cda6ccc3" />
+
+Also see if we are able to delete the file provisioned by terraform
+```
+ls -l
+cat myfile.txt
+terraform show
+terraform destroy --auto-approve
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8c0e2d1b-9465-47c4-a783-1cf576361483" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/523bc9dd-fbbb-48d6-91bf-cddf989e469c" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/bcc19575-a480-4c6c-81b4-017fa7136611" />
