@@ -10,3 +10,8 @@
 
 ## Tools installed in our lab machine
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/bce49019-4a81-41be-9a5f-6d52895c4a30" />
+
+## Training Feedback
+<pre>
+https://survey.zohopublic.com/zs/T2M5mf  
+</pre>
