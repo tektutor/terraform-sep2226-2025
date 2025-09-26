@@ -253,3 +253,7 @@ Blocks provisioning of small/unsupported instance types.
 <pre>
 https://www.tektutor.org/ci-cd-with-maven-github-docker-jenkins/	
 </pre>
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8d2a3fea-7433-4329-928b-455fdd2f0c25" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1924b33e-99d3-4816-afe3-3003721bc4af" />
+
