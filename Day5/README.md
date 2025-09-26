@@ -104,6 +104,9 @@ cd ~/terraform-sep2226-2025
 git pull
 cd Day5/custom-terraform-providers/docker
 tree
+go mod init github.com/tektutor/terraform-provider-docker
+cat go.mod
+go mod tidy
 ls -l
 go build
 ls -l
@@ -111,6 +114,9 @@ go install
 ls -l
 ls -l ~/go/bin
 ```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c08f4879-10f6-48dd-a6d1-7b1a8d2dfce0" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/31cf43b7-1470-4057-915b-dd24a61e02da" />
+
 
 ## Lab - Using our custom terraform docker provider in Terraform manifest script
 ```
